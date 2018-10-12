@@ -3,7 +3,7 @@ package person
 import (
 	"database/sql"
 
-	"github.com/landmarkhw/profile-go-vs-c-sharp-for-microservices/database"
+	"github.com/landmarkhw/profile-go-microservice/database"
 )
 
 // Get the person with the given id.

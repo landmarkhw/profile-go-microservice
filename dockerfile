@@ -1,5 +1,5 @@
 FROM golang:latest
-WORKDIR /app/src/github.com/landmarkhw/profile-go-vs-c-sharp-for-microservices
+WORKDIR /app/src/github.com/landmarkhw/profile-go-microservice
 ENV GOPATH=/app
 
 # Copy files to the container

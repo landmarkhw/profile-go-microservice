@@ -2,7 +2,7 @@ package status
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/landmarkhw/profile-go-vs-c-sharp-for-microservices/database"
+	"github.com/landmarkhw/profile-go-microservice/database"
 )
 
 func getStatus(ctx *gin.Context) {
