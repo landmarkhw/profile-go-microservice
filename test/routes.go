@@ -1,7 +1,8 @@
-package status
+package test
 
 import (
 	"time"
+
 	"github.com/gin-gonic/gin"
 )
 
@@ -18,34 +19,34 @@ func getJsonComplex(ctx *gin.Context) {
 		"id": 1,
 		"items": []gin.H{
 			{
-				"id": 1,
+				"id":      1,
 				"another": "thing",
-				"ts": now,
+				"ts":      now,
 			},
 			{
-				"id": 2,
+				"id":      2,
 				"another": "thing",
-				"ts": now,
+				"ts":      now,
 			},
 			{
-				"id": 3,
+				"id":      3,
 				"another": "thing",
-				"ts": now,
+				"ts":      now,
 			},
 			{
-				"id": 4,
+				"id":      4,
 				"another": "thing",
-				"ts": now,
+				"ts":      now,
 			},
 			{
-				"id": 5,
+				"id":      5,
 				"another": "thing",
-				"ts": now,
+				"ts":      now,
 			},
 			{
-				"id": 6,
+				"id":      6,
 				"another": "thing",
-				"ts": now,
+				"ts":      now,
 			},
 		},
 		"success": true,
