@@ -12,43 +12,22 @@ func getJsonSimple(ctx *gin.Context) {
 	})
 }
 
-var now = time.Now()
-
 func getJsonComplex(ctx *gin.Context) {
+	var items [1000]gin.H
+	var now = time.Now()
+
+	// Generate 1000 items
+	for i := 0; i < 1000; i++ {
+		items[i] = gin.H{
+			"id":      i,
+			"another": "thing",
+			"ts":      now,
+		}
+	}
+
 	ctx.JSON(200, gin.H{
-		"id": 1,
-		"items": []gin.H{
-			{
-				"id":      1,
-				"another": "thing",
-				"ts":      now,
-			},
-			{
-				"id":      2,
-				"another": "thing",
-				"ts":      now,
-			},
-			{
-				"id":      3,
-				"another": "thing",
-				"ts":      now,
-			},
-			{
-				"id":      4,
-				"another": "thing",
-				"ts":      now,
-			},
-			{
-				"id":      5,
-				"another": "thing",
-				"ts":      now,
-			},
-			{
-				"id":      6,
-				"another": "thing",
-				"ts":      now,
-			},
-		},
+		"id":      1,
+		"items":   items,
 		"success": true,
 	})
 }
