@@ -56,5 +56,5 @@ func getJsonComplex(ctx *gin.Context) {
 // Defines routes used by the web server
 func Routes(engine *gin.Engine) {
 	engine.GET("/test/json/simple", getJsonSimple)
-	engine.GET("/test/json/complex", getJsonSimple)
+	engine.GET("/test/json/complex", getJsonComplex)
 }
