@@ -47,9 +47,15 @@ func getJsonCustom(ctx *gin.Context) {
 	ctx.JSON(200, custom)
 }
 
+func getHelloWorld(ctx *gin.Context) {
+	ctx.Writer.WriteString("Hello, world!")
+	ctx.Status(200)	
+}
+
 // Defines routes used by the web server
 func Routes(engine *gin.Engine) {
 	engine.GET("/test/json/simple", getJsonSimple)
 	engine.GET("/test/json/complex", getJsonComplex)
 	engine.GET("/test/json/custom", getJsonCustom)
+	engine.GET("/test/json/hello-world", getHelloWorld)
 }
