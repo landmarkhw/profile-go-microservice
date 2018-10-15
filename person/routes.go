@@ -7,13 +7,13 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func getPerson(ctx *gin.Context) {
-	id, err := strconv.ParseInt(ctx.Param("id"), 10, 64)
+func getPerson(c *gin.Context) {
+	id, err := strconv.ParseInt(c.Param("id"), 10, 64)
 	if err != nil {
 		panic(err)
 	}
 	person := Get(id)
-	ctx.JSON(200, gin.H{"data": person})
+	c.JSON(200, gin.H{"data": person})
 }
 
 func savePerson(c *gin.Context) {

@@ -5,10 +5,10 @@ import (
 	"github.com/landmarkhw/profile-go-microservice/database"
 )
 
-func getStatus(ctx *gin.Context) {
+func getStatus(c *gin.Context) {
 	dbSuccess := pfdb.Test()
 
-	ctx.JSON(200, gin.H{
+	c.JSON(200, gin.H{
 		"database": dbSuccess,
 	})
 }
